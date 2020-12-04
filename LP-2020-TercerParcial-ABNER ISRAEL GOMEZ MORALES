@@ -1,0 +1,1709 @@
+using System;
+
+public class Program {
+    public static void Main() {
+        int varAuxiliarGlobal = 0;
+        Program problema = new Program();
+
+        while (varAuxiliarGlobal == 0) {
+            Console.WriteLine("--- Menu Principal ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("1. Últimos 3 ejercicios de la Tarea 9 ");
+            Console.WriteLine("2. Ejercicios 2, 3 y 4 de la Tarea 10 ");
+            Console.WriteLine("3. Primero 5 Ejercicios de la Tarea 11 ");
+            Console.WriteLine("4. Últimos 5 ejercicios de la Tarea 12 ");
+            Console.WriteLine("5. Los ejercicios de la Tarea 13 ");
+            Console.WriteLine("6. Los ejercicios de la Tarea 14 ");
+            Console.WriteLine("7. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            int opcionEntrada;
+            opcionEntrada = int.Parse(Console.ReadLine());
+
+            switch (opcionEntrada) {
+                case 1:
+                    problema.problema1();
+                    break;
+                case 2:
+                    problema.problema2();
+                    break;
+                case 3:
+                    problema.problema3();
+                    break;
+                case 4:
+                    problema.problema4();
+                    break;
+                case 5:
+                    problema.problema5();
+                    break;
+                case 6:
+                    problema.problema6();
+                    break;
+                case 7:
+                    varAuxiliarGlobal = 1;
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("* Abner Israel Gomez Morales");
+                    Console.WriteLine("");
+                    break;
+                default:
+                    Console.WriteLine("Opcion erronea, introduce una opcion entre 1-7");
+                    break;
+            }
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////
+    public void problema1() {
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("1. Últimos 3 ejercicios de la Tarea 9 ");
+        Console.WriteLine("----------------------");
+        int varAuxiliarlocal = 0;
+        Program problema1 = new Program();
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("1. Ejercicio 1");
+            Console.WriteLine("2. Ejercicio 2");
+            Console.WriteLine("3. Ejercicio 3");
+            Console.WriteLine("4. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "1") {
+                problema1.problema1_1();
+            }
+            if (opcionEntradaLocal == "2") {
+                problema1.problema1_2();
+            }
+            if (opcionEntradaLocal == "3") {
+                problema1.problema1_3();
+            }
+            if (opcionEntradaLocal == "4") {
+                varAuxiliarlocal = 1;
+            }
+            if (opcionEntradaLocal != "1" && opcionEntradaLocal != "2" && opcionEntradaLocal != "3" && opcionEntradaLocal != "4") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre 1-4");
+            }
+        }
+    }
+
+    public void problema1_1() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("1. Últimos 3 ejercicios de la Tarea 9 ");
+        Console.WriteLine("Ejercicio 1");
+        Console.WriteLine("----------------------");
+        //Programa que determine cuál de tres números diferentes es el mayor, y cuál es el menor. (Si los numeros son iguales, enviar mensaje) (Usar IF)
+        int num1 = 0;
+        int num2 = 0;
+        int num3 = 0;
+        Console.WriteLine("Se determinara qué número es mayor y cúal menor de 3 valores...");
+        Console.WriteLine("Inserte el primer número");
+        num1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Inserte el segundo número");
+        num2 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Inserte el tercer número");
+        num3 = int.Parse(Console.ReadLine());
+        if (num1 == num2 & num1 == num3 & num2 == num3) {
+            Console.WriteLine("Todos los números son iguales, seleccione otros.");
+        }
+        if (num1 > num2 & num1 > num3) //el primer número es mayor
+        {
+            if (num1 > num3) //el 2do mayor al 3ro
+            {
+                Console.WriteLine("El primer número (" + num1 + ") es mayor y el tercer número (" + num3 + ")" + " es menor");
+            } else {
+                Console.WriteLine("El primer número (" + num1 + ") es mayor y el segundo número (" + num2 + ")" + " es menor");
+            }
+        }
+        if (num2 > num1 & num2 > num3) { //el segundo mayor
+            if (num1 > num2) {
+                Console.WriteLine("El segundo número (" + num2 + ") es mayor y el tercer número (" + num3 + ")" + " es menor");
+            } else {
+                Console.WriteLine("El segundo número (" + num2 + ") es mayor y el primer número (" + num1 + ")" + " es menor");
+            }
+        }
+        if (num3 > num1 & num3 > num2) { //El tercero mayor
+            if (num1 > num2) {
+                Console.WriteLine("El tercer número (" + num3 + ") es mayor y el segundo número (" + num2 + ")" + " es menor");
+            } else {
+                Console.WriteLine("El tercer número (" + num3 + ") es mayor y el primer número (" + num1 + ")" + " es menor");
+            }
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+		
+    }
+    public void problema1_2() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("1. Últimos 3 ejercicios de la Tarea 9 ");
+        Console.WriteLine("Ejercicio 2");
+        Console.WriteLine("----------------------");
+        decimal cal6 = 0;
+        decimal cal7 = 0;
+        decimal cal8 = 0;
+        decimal cal9 = 0;
+        decimal cal10 = 0;
+        decimal prom1 = 0;
+        decimal max = 0;
+        decimal min = 0;
+        Console.WriteLine("Se determinará el promedio de 5 números");
+        Console.WriteLine("Inserte 1er número");
+        cal6 = decimal.Parse(Console.ReadLine());
+        Console.WriteLine("Inserte 2do número");
+        cal7 = decimal.Parse(Console.ReadLine());
+        Console.WriteLine("Inserte 3ra número");
+        cal8 = decimal.Parse(Console.ReadLine());
+        Console.WriteLine("Inserte 4ta número");
+        cal9 = decimal.Parse(Console.ReadLine());
+        Console.WriteLine("Inserte 5ta número");
+        cal10 = decimal.Parse(Console.ReadLine());
+
+        prom1 = (cal6 + cal7 + cal8 + cal9 + cal10) / 5;
+
+        Console.WriteLine("Los números son: " + cal6 + ",  " + cal7 + ",  " + cal8 + ",  " + cal9 + ",  " + cal10 + ", y el promedio es: " + prom1);
+        Console.WriteLine("El máximo es " + Math.Max(cal6, cal7));
+
+        if (cal6 > cal7 & cal6 > cal8 & cal6 > cal9 & cal6 > cal10) // el primero es mayor
+        {
+            if (cal7 > cal8 & cal7 > cal9 & cal7 > cal10) // el segundo mayor 
+            {
+                if (cal8 > cal9 & cal8 > cal10) //el tercero mayor 
+                {
+                    if (cal9 > cal10) //el 4to mayor
+                    {
+                        Console.WriteLine("El 1er número (" + cal6 + ")" + " es mayor y el 5to número (" + cal10 + ")" + " es menor");
+                    } else {
+                        Console.WriteLine("El 1er número (" + cal6 + ")" + " es mayor y el 4to número (" + cal9 + ")" + " es menor");
+                    }
+                }
+            }
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema1_3() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("1. Últimos 3 ejercicios de la Tarea 9 ");
+        Console.WriteLine("Ejercicio 3");
+        Console.WriteLine("----------------------");
+        double num10 = 0;
+        double num11 = 0;
+        double potencia = 0;
+        Console.WriteLine("Ejercicio 12: Se elevará un número X a la n potencia");
+        Console.WriteLine("Inserte número");
+        num10 = double.Parse(Console.ReadLine());
+        Console.WriteLine("Inserte número de potencia");
+        num11 = double.Parse(Console.ReadLine());
+        potencia = Math.Pow(num10, num11);
+        //potencia = (num10)^(num11);
+        Console.WriteLine("El resultado de elevar (" + num10 + ")" + " a la pontencia (" + num11 + ")" + " es: " + potencia);
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+
+    
+    public void problema2() {
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("2. Ejercicios 2, 3 y 4 de la Tarea 10 ");
+        Console.WriteLine("----------------------");
+        int varAuxiliarlocal = 0;
+        Program problema2 = new Program();
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("1. Ejercicio 2");
+            Console.WriteLine("2. Ejercicio 3");
+            Console.WriteLine("3. Ejercicio 4");
+            Console.WriteLine("4. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "1") {
+                problema2.problema2_1();
+            }
+            if (opcionEntradaLocal == "2") {
+                problema2.problema2_2();
+            }
+            if (opcionEntradaLocal == "3") {
+                problema2.problema2_3();
+            }
+            if (opcionEntradaLocal == "4") {
+                varAuxiliarlocal = 1;
+            }
+            if (opcionEntradaLocal != "1" && opcionEntradaLocal != "2" && opcionEntradaLocal != "3" && opcionEntradaLocal != "4") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre 1-4");
+            }
+        }
+    }
+    public void problema2_1() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("2. Ejercicios 2, 3 y 4 de la Tarea 10 ");
+        Console.WriteLine("1. Ejercicio 2");
+        Console.WriteLine("----------------------");
+        
+		
+		//*2. Programa para sumar, restar, multiplicar y dividir dos números cualquiera. 
+        //(Mostrar los resultados de la operación seleccionada usando Switch)*/
+        
+			
+		Console.WriteLine("----------------------");
+        string operacion = "";
+        int numero1;
+        int numero2;
+        int oper;
+        Console.WriteLine("Realizaremos las siguientes Operaciones");
+        Console.WriteLine(" suma ");
+        Console.WriteLine(" Resta");
+		Console.WriteLine(" Multiplicacion");
+		Console.WriteLine(" Division ");
+		Console.WriteLine(" ");
+        Console.WriteLine("Ingrese un número: ");
+        numero1 = Int32.Parse(Console.ReadLine());
+
+        Console.WriteLine("Ingrese otro número: ");
+        numero2 = Int32.Parse(Console.ReadLine());
+
+        Console.WriteLine("Escribe la operacion a realizar");
+        operacion = Console.ReadLine();
+
+        switch (operacion) {
+            case "suma":
+                oper = numero1 + numero2;
+                Console.WriteLine("La suma de " + numero1 + " mas " + numero2 + " es igual a " + oper);
+                break;
+            case "resta":
+                oper = numero1 - numero2;
+                Console.WriteLine("La resta de " + numero1 + " menos " + numero2 + " es igual a " + oper);
+                break;
+            case "multiplicacion":
+                oper = numero1 * numero2;
+                Console.WriteLine("La multiplicacion de " + numero1 + " por " + numero2 + " es igual a " + oper);
+                break;
+            case "division":
+                oper = numero1 / numero2;
+                Console.WriteLine("La division de " + numero1 + " entre " + numero2 + " es igual a " + oper);
+                break;
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema2_2() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("2. Ejercicios 2, 3 y 4 de la Tarea 10 ");
+        Console.WriteLine("2. Ejercicio 3");
+        Console.WriteLine("----------------------");
+       
+		
+		//*3. Programa para determinar el área o el perímetro de un triángulo ó un cuadrado, o un rectángulo o un círculo,
+        //las medidas y lo que quiere calcular debe ser introducido por el usuario. (Usar Switch)*/
+        
+		Console.WriteLine("----------------------");
+        string opcion = "";
+        string poa = "";
+        double pi;
+        double oper3, rad;
+        int oper2;
+        int bas, bas2, bas3, alt;
+        Console.WriteLine("Calculemos el area y perimtro de una figura");
+        Console.WriteLine(" triangulo");
+        Console.WriteLine(" cuadrado");
+		Console.WriteLine(" rectangulo");
+		Console.WriteLine(" circulo");
+
+        Console.WriteLine("Escribe el nombre de la figura");
+        opcion = Console.ReadLine();
+        Console.WriteLine("Que deseas calcular, el area o perimetro?");
+        poa = Console.ReadLine();
+
+        switch (poa) {
+            case "area":
+                switch (opcion) {
+                    case "triangulo":
+                        Console.WriteLine("Ingrese la base del triangulo: ");
+                        bas = Int32.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Ingrese la altura del triangulo: ");
+                        alt = Int32.Parse(Console.ReadLine());
+                        oper2 = (bas * alt) / 2;
+                        Console.WriteLine("El area del triangulo es igual a " + bas + " por " + alt + " /2 = " + oper2);
+                        break;
+                    case "cuadrado":
+                        Console.WriteLine("Ingrese la medida de un lado del cuadrado: ");
+                        bas = Int32.Parse(Console.ReadLine());
+                        oper2 = (bas * bas) / 2;
+                        Console.WriteLine("El area del cuadrado es igual a " + bas + " por " + bas + " = " + oper2);
+                        break;
+                    case "rectangulo":
+                        Console.WriteLine("Ingrese el lado menor del rectangulo: ");
+                        bas = Int32.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Ingrese el lado mayor del rectangulo: ");
+                        alt = Int32.Parse(Console.ReadLine());
+                        oper2 = bas * alt;
+                        Console.WriteLine("El area del rectangulo es igual a " + bas + " por " + alt + " = " + oper2);
+
+                        break;
+                    case "circulo":
+                        Console.WriteLine("Ingrese el radio del circulo: ");
+                        rad = Int32.Parse(Console.ReadLine());
+                        pi = 3.1416;
+                        oper3 = (pi * rad);
+                        oper3 = oper3 * oper3;
+                        Console.WriteLine("El area del circulo es igual a " + oper3);
+                        break;
+                }
+                break;
+            case "perimetro":
+                switch (opcion) {
+                    case "triangulo":
+                        Console.WriteLine("Ingrese la base del triangulo: ");
+                        bas = Int32.Parse(Console.ReadLine());
+                        Console.WriteLine("Ingrese la base del triangulo: ");
+                        bas2 = Int32.Parse(Console.ReadLine());
+                        Console.WriteLine("Ingrese la base del triangulo: ");
+                        bas3 = Int32.Parse(Console.ReadLine());
+
+                        oper2 = bas + bas2 + bas3;
+                        Console.WriteLine("El perimetro del triangulo es igual a " + oper2);
+                        break;
+                    case "cuadrado":
+                        Console.WriteLine("Ingrese la medida de un lado del cuadrado: ");
+                        bas = Int32.Parse(Console.ReadLine());
+                        oper2 = bas * 4;
+                        Console.WriteLine("El perimetro del cuadrado es igual a " + oper2);
+                        break;
+                    case "rectangulo":
+                        Console.WriteLine("Ingrese el lado menor del rectangulo: ");
+                        bas = Int32.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Ingrese el lado mayor del rectangulo: ");
+                        alt = Int32.Parse(Console.ReadLine());
+                        oper2 = bas * 2 + alt * 2;
+                        Console.WriteLine("El perimetro del rectangulo es igual a " + oper2);
+
+                        break;
+                    case "circulo":
+                        Console.WriteLine("Ingrese el radio del circulo: ");
+                        rad = Int32.Parse(Console.ReadLine());
+                        pi = 3.1416;
+                        oper3 = 2 * pi * rad;
+                        Console.WriteLine("El perimetro del circulo es igual a " + oper3);
+                        break;
+                }
+                break;
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema2_3() {
+        
+		Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("2. Ejercicios 2, 3 y 4 de la Tarea 10 ");
+        Console.WriteLine("3. Ejercicio 4");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("** No realizado :( **");
+    }
+
+    //
+    public void problema3() {
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("3. Primero 5 Ejercicios de la Tarea 11 ");
+        Console.WriteLine("----------------------");
+        int varAuxiliarlocal = 0;
+        Program problema3 = new Program();
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("1. Ejercicio 1");
+            Console.WriteLine("2. Ejercicio 2");
+            Console.WriteLine("3. Ejercicio 3");
+            Console.WriteLine("4. Ejercicio 4");
+            Console.WriteLine("5. Ejercicio 5");
+            Console.WriteLine("6. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "1") {
+                problema3.problema3_1();
+            }
+            if (opcionEntradaLocal == "2") {
+                problema3.problema3_2();
+            }
+            if (opcionEntradaLocal == "3") {
+                problema3.problema3_3();
+            }
+            if (opcionEntradaLocal == "4") {
+                problema3.problema3_4();
+            }
+            if (opcionEntradaLocal == "5") {
+                problema3.problema3_5();
+            }
+            if (opcionEntradaLocal == "6") {
+                varAuxiliarlocal = 1;
+            }
+            if (opcionEntradaLocal != "1" && opcionEntradaLocal != "2" && opcionEntradaLocal != "3" && opcionEntradaLocal != "4" && opcionEntradaLocal != "5" && opcionEntradaLocal != "6") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre 1-6");
+            }
+        }
+    }
+
+    public void problema3_1() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("3. Primero 5 Ejercicios de la Tarea 11 ");
+        Console.WriteLine("1. Ejercicio 1");
+        Console.WriteLine("----------------------");
+        //1.- Muestre en pantalla los números del 1 al 100 en orden ascendente
+
+        Console.WriteLine("Problema 1");
+
+        int x;
+        for (x = 1; x <= 100; x++) {
+            Console.WriteLine("Repeticion # " + x);
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema3_2() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("3. Primero 5 Ejercicios de la Tarea 11 ");
+        Console.WriteLine("2. Ejercicio 2");
+        Console.WriteLine("----------------------");
+        //2.- Muestre los números del 100 al 0 en orden descendente 
+
+        Console.WriteLine("Problema 2");
+
+        int a;
+        for (a = 100; a >= 0; a--) {
+            Console.WriteLine("Repeticion # " + a);
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema3_3() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("3. Primero 5 Ejercicios de la Tarea 11 ");
+        Console.WriteLine("3. Ejercicio 3");
+        Console.WriteLine("----------------------");
+        //3.- Imprimir la suma de los primero 100 numeros 
+        Console.WriteLine("...");
+        Console.WriteLine("=== EJERCICIO 3 ====");
+
+        int y;
+        int sum = 0;
+        for (y = 1; y <= 100; y++) {
+            sum = sum + y;
+            Console.WriteLine("Suma de : " + (y - 1) + " mas " + (sum - (y - 1)) + " es igual a " + sum);
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+
+    public void problema3_4() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("3. Primero 5 Ejercicios de la Tarea 11 ");
+        Console.WriteLine("4. Ejercicio 4");
+        Console.WriteLine("----------------------");
+        //4.- Introducir tantas frases como el usuario quiera y contar cuantas fueron.
+        Console.WriteLine("..");
+        Console.WriteLine("Problema 4");
+        Console.WriteLine("..");
+
+        string frase;
+        int z1 = 0;
+        Console.WriteLine("Ingresa todas las frases que quieras");
+        Console.WriteLine("Cuando quieras terminar solo debes escribr la palabra <fin>");
+        for (frase = ""; frase != "fin"; frase = Console.ReadLine()) {
+            z1 = z1 + 1;
+        }
+        Console.WriteLine("El numero de frases ingresadas es de: " + (z1 - 1));
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema3_5() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("3. Primero 5 Ejercicios de la Tarea 11 ");
+        Console.WriteLine("5. Ejercicio 5");
+        Console.WriteLine("----------------------");
+        int a, b, e = 0, a1, b1;
+        int c = 1;
+        int d = 1, q1 = 0;
+        int suma = 0, sumapar = 0;
+        int par = 0;
+        int sumaimpar = 0;
+        Console.WriteLine("Ingrese dos números: ");
+        a = Int32.Parse(Console.ReadLine());
+        b = Int32.Parse(Console.ReadLine());
+
+        for (c = 1;
+            (a >= 0 && b >= 0 && c <= 1); c++) {
+            for (d = 1;
+                (a < b && d <= 1); d++) {
+                a = a + 1;
+                b = b - 1;
+                a1 = a;
+                b1 = b;
+                for (a = a1;
+                    (a <= b); a++) {
+                    Console.WriteLine("#" + a);
+                    for (par = 0;
+                        (a % 2 == 0 && par < 1); par++) {
+                        sumapar = sumapar + 1;
+                    }
+                    par = 0;
+                    for (par = 0;
+                        (a % 2 == 1 && par < 1); par++) {
+                        sumaimpar = sumaimpar + 1;
+                        e = e + a;
+                    }
+                    par = 0;
+                    suma = suma + 1;
+
+                }
+                Console.WriteLine("Entre ambos numeros ingresados hay un total de " + (suma) + " números");
+                Console.WriteLine("Entre ambos numeros ingresados hay un total de " + (sumapar) + " números pares");
+                Console.WriteLine("Entre ambos numeros ingresados hay un total de " + (sumaimpar) + " números impares");
+                Console.WriteLine("La suma de los números impares es de: " + e);
+                q1 = d;
+            }
+            for (d = q1;
+                (a > b && d < 1); d++) {
+                a = a - 1;
+                b = b + 1;
+                a1 = a;
+                b1 = b;
+                for (b = b1;
+                    (b <= a); b++) {
+                    for (par = 0;
+                        (b % 2 == 0 && par < 1); par++) {
+                        sumapar = sumapar + 1;
+                    }
+                    par = 0;
+                    for (par = 0;
+                        (b % 2 == 1 && par < 1); par++) {
+                        sumaimpar = sumaimpar + 1;
+                        e = e + b;
+                    }
+                    par = 0;
+                    Console.WriteLine("#" + b);
+                    suma = suma + 1;
+                }
+                Console.WriteLine("Entre ambos numeros ingresados hay un total de " + (suma) + " números");
+                Console.WriteLine("Entre ambos numeros ingresados hay un total de " + (sumapar) + " números pares");
+                Console.WriteLine("Entre ambos numeros ingresados hay un total de " + (sumaimpar) + " números impares");
+                Console.WriteLine("La suma de los números impares es de: " + e);
+            }
+			Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+        }
+        for (c = 1;
+            ((a <= 0 || b <= 0) && c <= 1); c++) {
+            Console.WriteLine("El o los numeros ingresados son negativos");
+        }
+        for (e = 0;
+            (a == b && e < 1); e++) {
+            Console.WriteLine("Los números ingresados son iguales");
+        }
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////
+    public void problema4() {
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("4. Últimos 5 ejercicios de la Tarea 12 ");
+        Console.WriteLine("----------------------");
+        int varAuxiliarlocal = 0;
+        Program problema4 = new Program();
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("1. Ejercicio 1");
+            Console.WriteLine("2. Ejercicio 2");
+            Console.WriteLine("3. Ejercicio 3");
+            Console.WriteLine("4. Ejercicio 4");
+            Console.WriteLine("5. Ejercicio 5");
+            Console.WriteLine("6. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "1") {
+                problema4.problema4_1();
+            }
+            if (opcionEntradaLocal == "2") {
+                problema4.problema4_2();
+            }
+            if (opcionEntradaLocal == "3") {
+                problema4.problema4_3();
+            }
+            if (opcionEntradaLocal == "4") {
+                problema4.problema4_4();
+            }
+            if (opcionEntradaLocal == "5") {
+                problema4.problema4_5();
+            }
+            if (opcionEntradaLocal == "6") {
+                varAuxiliarlocal = 1;
+            }
+            if (opcionEntradaLocal != "1" && opcionEntradaLocal != "2" && opcionEntradaLocal != "3" && opcionEntradaLocal != "4" && opcionEntradaLocal != "5" && opcionEntradaLocal != "6") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre 1-6");
+            }
+        }
+    }
+
+    public void problema4_1() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("4. Últimos 5 ejercicios de la Tarea 12 ");
+        Console.WriteLine("1. Ejercicio 1");
+        Console.WriteLine("----------------------");
+        //8. Algoritmo que muestre una lista de todos los números pares que hay entre dos números cualquiera y que nos
+        //diga cuantos son. (Ejemplo: Se leen los números 8 y 17, el resultado del algoritmo debe ser 10,12,14,16, Entre
+        //el 8 y el 17 hay 5 números pares)
+        Console.WriteLine("====================");
+        Console.WriteLine("=== EJERCICIO 8 ====");
+        Console.WriteLine("====================");
+        int g1, g2, g3 = 0, g4 = 0, g5 = 0;
+        int g6, g7;
+        Console.WriteLine("Ingrese dos números: ");
+        g1 = Int32.Parse(Console.ReadLine());
+        g2 = Int32.Parse(Console.ReadLine());
+        g6 = g1;
+        g7 = g2;
+        while (g1 < g2 && g3 < 1) {
+            g1 = g1 + 1;
+            g2 = g2 - 1;
+            while (g1 <= g2) {
+                while (g1 % 2 == 0 && g4 < 1) {
+                    Console.WriteLine("#: " + g1);
+                    g4++;
+                    g5 = g5 + 1;
+                }
+                g4 = 0;
+                g1++;
+            }
+            g3++;
+            Console.WriteLine("Entre el " + g6 + " y el " + g7 + " hay " + g5 + " números pares.");
+        }
+        while (g2 < g1 && g3 < 1) {
+            g1 = g1 - 1;
+            g2 = g2 + 1;
+            while (g2 <= g1) {
+                while (g2 % 2 == 0 && g4 < 1) {
+                    Console.WriteLine("#: " + g2);
+                    g4++;
+                    g5 = g5 + 1;
+                }
+                g4 = 0;
+                g2++;
+            }
+            g3++;
+            Console.WriteLine("Entre el " + g7 + " y el " + g6 + " hay " + g5 + " números pares.");
+        }
+        while (g1 == g2 && g3 < 1) {
+            Console.WriteLine("Los números ingresados son iguales");
+            g3++;
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema4_2() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("4. Últimos 5 ejercicios de la Tarea 12 ");
+        Console.WriteLine("2. Ejercicio 2");
+        Console.WriteLine("----------------------");
+        //9. Algoritmo que muestre una lista de todos los números impares que hay entre dos números cualquiera. (Ejemplo:
+        //Se leen los números 8 y 17, el resultado del algoritmo debe ser 9,11,13,15, Entre el 8 y el 17 hay 4 números
+        //impares)
+        Console.WriteLine("--");
+        Console.WriteLine("-- Problema 9--");
+        Console.WriteLine("--");
+		
+        int h1, h2, h3 = 0, h4 = 0, h5 = 0;
+        int h6, h7;
+        Console.WriteLine("Ingrese dos números: ");
+        h1 = Int32.Parse(Console.ReadLine());
+        h2 = Int32.Parse(Console.ReadLine());
+        h6 = h1;
+        h7 = h2;
+        while (h1 < h2 && h3 < 1) {
+            h1 = h1 + 1;
+            h2 = h2 - 1;
+            while (h1 <= h2) {
+                while (h1 % 2 == 1 && h4 < 1) {
+                    Console.WriteLine("#: " + h1);
+                    h4++;
+                    h5 = h5 + 1;
+                }
+                h4 = 0;
+                h1++;
+            }
+            h3++;
+            Console.WriteLine("Entre el " + h6 + " y el " + h7 + " hay " + h5 + " números impares.");
+        }
+        while (h2 < h1 && h3 < 1) {
+            h1 = h1 - 1;
+            h2 = h2 + 1;
+            while (h2 <= h1) {
+                while (h2 % 2 == 1 && h4 < 1) {
+                    Console.WriteLine("#: " + h2);
+                    h4++;
+                    h5 = h5 + 1;
+                }
+                h4 = 0;
+                h2++;
+            }
+            h3++;
+            Console.WriteLine("Entre el " + h7 + " y el " + h6 + " hay " + h5 + " números impares.");
+        }
+        while (h1 == h2 && h3 < 1) {
+            Console.WriteLine("Los números ingresados son iguales");
+            h3++;
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema4_3() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("4. Últimos 5 ejercicios de la Tarea 12 ");
+        Console.WriteLine("3. Ejercicio 3");
+        Console.WriteLine("----------------------");
+        //10. Algoritmo para leer 5 números, obtener su promedio, el mayor y el menor de esos números.
+        
+		Console.WriteLine("----------------------");
+        Console.WriteLine("--   Ejercicio 10   --");
+        Console.WriteLine("----------------------");
+        int c1, c2, c3, c4, c5, promedio;
+		int y1 = 0, y2 = 0;
+		Console.WriteLine("Ingrese cinco números: ");
+		c1 = Int32.Parse(Console.ReadLine());
+		c2 = Int32.Parse(Console.ReadLine());
+		c3 = Int32.Parse(Console.ReadLine());
+		c4 = Int32.Parse(Console.ReadLine());
+		c5 = Int32.Parse(Console.ReadLine());
+		promedio = (c1 + c2 + c3 + c4 + c5 )/5;
+		Console.WriteLine("El promedio de los 5 números ingresados es de:" + promedio);
+
+		while(c1==c2 && c1==c3 && c1==c4 && c1==c5 && y1<1 && y2<1)
+		{
+			Console.WriteLine("Todos los números ingresados son iguales");
+			y1 ++ ;
+			y2 ++ ;
+		}
+		while((c1>c2 || c1>=c2) && (c1>c3 || c1>=c3) && (c1>c4 || c1>=c4) && (c1>c5 || c1>=c5) && (y1<1))
+		{
+			Console.WriteLine("El número mas alto es el: "+ c1+" que fue el primer numero en ser ingresado");
+			y1 ++ ;
+		}
+		while((c2>c1 || c2>=c1) && (c2>c3 || c2>=c3) && (c2>c4 || c2>=c4) && (c2>c5 || c2>=c5) && (y1<1))
+		{
+			Console.WriteLine("El número mas alto es el: "+ c2+" que fue el segundo numero en ser ingresado");
+			y1 ++ ;
+		}
+		while((c3>c2 || c3>=c2) && (c3>c1 || c3>=c1) && (c3>c4 || c3>=c4) && (c3>c5 || c3>=c5) && (y1<1))
+		{
+			Console.WriteLine("El número mas alto es el: "+ c3+" que fue el tercer numero en ser ingresado");
+			y1 ++ ;
+		}
+		while((c4>c2 || c4>=c2) && (c4>c3 || c4>=c3) && (c4>c1 || c4>=c1) && (c4>c5 || c4>=c5) && (y1<1))
+		{
+			Console.WriteLine("El número mas alto es el: "+ c4+" que fue el cuarto numero en ser ingresado");
+			y1 ++ ;
+		}
+		while((c5>c2 || c5>=c2) && (c5>c3 || c5>=c3) && (c5>c4 || c5>=c4) && (c5>c1 || c5>=c1) && (y1<1))
+		{
+			Console.WriteLine("El número mas alto es el: "+ c5+" que fue el quinto numero en ser ingresado");
+			y1 ++ ;
+		}
+		while((c1<c2 || c1<=c2) && (c1<c3 || c1<=c3) && (c1<c4 || c1<=c4) && (c1<c5 || c1<=c5) && (y2<1))
+		{
+			Console.WriteLine("El número mas pequeño es el: "+ c1+" que fue el primer numero en ser ingresado");
+			y2 ++ ;
+		}
+		while((c2<c1 || c2<=c1) && (c2<c3 || c2<=c3) && (c2<c4 || c2<=c4) && (c2<c5 || c2<=c5) && (y2<1))
+		{
+			Console.WriteLine("El número mas pequeño es el: "+ c2+" que fue el segundo numero en ser ingresado");
+			y2 ++ ;
+		}
+		while((c3<c2 || c3<=c2) && (c3<c1 || c3<=c1) && (c3<c4 || c3<=c4) && (c3<c5 || c3<=c5) && (y2<1))
+		{
+			Console.WriteLine("El número mas pequeño es el: "+ c3+" que fue el tercer numero en ser ingresado");
+			y2 ++ ;
+		}
+		while((c4<c2 || c4<=c2) && (c4<c3 || c4<=c3) && (c4<c1 || c4<=c1) && (c4<c5 || c4<=c5) && (y2<1))
+		{
+			Console.WriteLine("El número mas pequeño es el: "+ c4+" que fue el cuarto numero en ser ingresado");
+			y2 ++ ;
+		}
+		while((c5<c2 || c5<=c2) && (c5<c3 || c5<=c3) && (c5<c4 || c5<=c4) && (c5<c1 || c5<=c1) && (y2<1))
+		{
+			Console.WriteLine("El número mas pequeño es el: "+ c5+" que fue el quinto numero en ser ingresado");
+			y2 ++ ;
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+
+    public void problema4_4() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("4. Últimos 5 ejercicios de la Tarea 12 ");
+        Console.WriteLine("4. Ejercicio 4");
+        Console.WriteLine("----------------------");
+        //11. Algoritmo “Criba de Eratóstenes”, para saber los números primos que hay entre dos números. 
+		// (Consulte anexos en la Tarea 5)
+        Console.WriteLine("----------------------");
+        Console.WriteLine("---- Ejercicio 11 ---- ");
+        Console.WriteLine("----------------------");
+        int divisible = 0;
+        int inicio;
+        int p1 = 0, p2 = 0, p3 = 0;
+        Console.WriteLine("Ingrese un número: ");
+        inicio = Int32.Parse(Console.ReadLine());
+        Console.WriteLine("Ingresa hasta que número quieras que imprima los números primos");
+        int numero_final = int.Parse(Console.ReadLine());
+        while (inicio == numero_final && p2 < 1) {
+            Console.WriteLine("Los numeros ingresados son iguales");
+            p2++;
+        }
+        inicio = inicio + 1;
+        numero_final = numero_final - 1;
+        while (inicio < numero_final) {
+            int i = 1;
+            while (i <= inicio) {
+                while (inicio % i == 0 && p1 < 1) {
+                    divisible++;
+                    p1++;
+                }
+                p1 = 0;
+                while (divisible > 2) {
+                    break;
+                }
+                p2 = 0;
+                i++;
+            }
+            while (divisible == 2 && p3 < 1) {
+                Console.WriteLine("#" + inicio + " es primo");
+                p3++;
+            }
+            p3 = 0;
+            divisible = 0;
+            inicio++;
+        }
+        inicio = inicio - 1;
+        numero_final = numero_final + 1;
+        while (numero_final < inicio) {
+            int i = 1;
+            while (i <= numero_final) {
+                while (numero_final % i == 0 && p1 < 1) {
+                    divisible++;
+                    p1++;
+                }
+                p1 = 0;
+                while (divisible > 2) {
+                    break;
+                }
+                p2 = 0;
+                i++;
+            }
+            while (divisible == 2 && p3 < 1) {
+                Console.WriteLine("#" + numero_final + " es primo");
+                p3++;
+            }
+            p3 = 0;
+            divisible = 0;
+            numero_final++;
+        }
+		 Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema4_5() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("4. Últimos 5 ejercicios de la Tarea 12 ");
+        Console.WriteLine("5. Ejercicio 5");
+        Console.WriteLine("----------------------");
+        //12.-Programa que resuelva el problema de la pelea de Pokemon. (Consultar Tareas 3 y 4)
+        
+        Console.WriteLine("--- Ejercicio 12 ---");
+        Console.WriteLine("---");
+        Console.WriteLine("Bienvenido a una pelea mas de pokemon");
+        Console.WriteLine("---");
+        Console.WriteLine("En esta ocacion se enfrentara:");
+        Console.WriteLine("PIKACHU vs JIGGLYPUFF");
+        Console.WriteLine("---");
+        Console.WriteLine("  Informacion  ");
+        Console.WriteLine("---");
+        Console.WriteLine("Cuando ataca PIKACHU le quita 55% de vida a su oponente");
+        Console.WriteLine("Cuando ataca JIGGLYPUFF le quita 45% de vida a su oponente");
+        Console.WriteLine("Ambos poquemones inician con un 100% de vida al inicio del primer juego");
+        Console.WriteLine("---");
+
+        int z1 = 100, x1 = 100, turno;
+        int t1 = 0, t2 = 0;
+        Console.WriteLine("iniciara el juego atacando, elige el turno");
+        Console.WriteLine("Turno de PIKACHU = 1");
+        Console.WriteLine("Turno de JIGGLYPUFF = 2");
+        Console.WriteLine("Ingrese el turno (1 o 2)");
+        turno = Int32.Parse(Console.ReadLine());
+
+        while ((turno > 0 && turno < 3) && t1 < 3) {
+
+            while (turno == 1 && z1 > 0 && x1 > 0) {
+                Console.WriteLine("                                                   ");
+                Console.WriteLine(" - JUGANDO -- ");
+                Console.WriteLine("                                                   ");
+                Console.WriteLine("--TURNO 1--");
+                Console.WriteLine("PIKACHU ataca, quitandole 55% de vida a JIGGLYPUFF.");
+                x1 = x1 - 55;
+                turno++;
+                Console.WriteLine("La vida de PIKACHU es de: " + z1 + " %");
+                Console.WriteLine("La vida de JIGGLYPUFF es de: " + x1 + " %");
+            }
+            while (turno == 2 && z1 > 0 && x1 > 0) {
+                Console.WriteLine("                                                   ");
+                Console.WriteLine("--Jugando--");
+                Console.WriteLine("                                                   ");
+                Console.WriteLine("--TURNO 2--");
+                Console.WriteLine("JIGGLYPUFF ataca, quitandole 45% de vida a PIKACHU.");
+                z1 = z1 - 45;
+                turno++;
+                Console.WriteLine("La vida de PIKACHU es de: " + z1 + " %");
+                Console.WriteLine("La vida de JIGGLYPUFF es de: " + x1 + " %");
+            }
+            turno = 1;
+            while (z1 < 0 && t2 < 1) {
+                Console.WriteLine("---");
+                Console.WriteLine("Lo sentimos el pokemon PIKACHU a muerto, por lo tanto JIGGLYPUFF a ganado la partida");
+                Console.WriteLine("La vida del ganador es de: " + x1 + " %");
+                t2++;
+            }
+                while (x1 < 0 && t2 < 1) {
+                Console.WriteLine("---");
+                Console.WriteLine("Lo sentimos el pokemon JIGGLYPUFF a muerto, por lo tanto PIKACHU a ganado la partida");
+                Console.WriteLine("La vida del ganador es de: " + z1 + " %");
+                t2++;
+            }
+            t1++;
+        }
+            while ((turno < 0 || turno > 2) && t1 < 1) {
+            t1++;
+            Console.WriteLine("Ingresaste un turno no valido");
+            Console.WriteLine("Nada mas tenias que ingresar 1 o 2");
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+
+
+    public void problema5() {
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("5. Los ejercicios de la Tarea 13 ");
+        Console.WriteLine("----------------------");
+        int varAuxiliarlocal = 0;
+        Program problema5 = new Program();
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("1. Ejercicio 1");
+            Console.WriteLine("2. Ejercicio 2");
+            Console.WriteLine("3. Ejercicio 3");
+            Console.WriteLine("4. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "1") {
+                problema5.problema5_1();
+            }
+            if (opcionEntradaLocal == "2") {
+                problema5.problema5_2();
+            }
+            if (opcionEntradaLocal == "3") {
+                problema5.problema5_3();
+            }
+            if (opcionEntradaLocal == "4") {
+                varAuxiliarlocal = 1;
+            }
+            if (opcionEntradaLocal != "1" && opcionEntradaLocal != "2" && opcionEntradaLocal != "3" && opcionEntradaLocal != "4") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre 1-4");
+            }
+        }
+    }
+
+    public void problema5_1() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("5. Los ejercicios de la Tarea 13 ");
+        Console.WriteLine("1. Ejercicio 1");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("-----------------------");
+        Console.WriteLine("1. Problema 1 ");
+        Console.WriteLine("-----------------------");
+
+        int[] valores = new int[5];
+        String[] nombres = new String[5];
+        int varAuxiliarlocal = 0;
+
+        for (int i = 0; i < 5; i++) {
+            Console.WriteLine("Ingresa el nombre (" + (i + 1) + "): ");
+            nombres[i] = Console.ReadLine();
+
+            Console.WriteLine("Ingresa la edad: ");
+            valores[i] = int.Parse(Console.ReadLine());
+            Console.WriteLine("-----------------------");
+        }
+
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("a. Los nombres y las edades de las personas mayores de edad en Mexico");
+            Console.WriteLine("b. Los nombres y las edades de las personas mayores de edad en Estados Unidos");
+            Console.WriteLine("c. Los nombres y las edades de las personas menores de edad en Mexico ");
+            Console.WriteLine("d. Los nombres y las edades de las personas menores de edad en Estados Unidos ");
+            Console.WriteLine("e. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "a") {
+                int mayorEdad = 18;
+                for (int j = 0; j < 5; j++) {
+                    if (valores[j] >= mayorEdad) {
+                        Console.WriteLine("Mayor de edad: " + nombres[j] + ", Edad: " + valores[j]);
+                    }
+                }
+            }
+
+            if (opcionEntradaLocal == "b") {
+                int mayorEdad = 21;
+                for (int j = 0; j < 5; j++) {
+                    if (valores[j] >= mayorEdad) {
+                        Console.WriteLine("Mayor de edad: " + nombres[j] + ", Edad: " + valores[j]);
+                    }
+                }
+            }
+
+            if (opcionEntradaLocal == "c") {
+                int menorEdad = 17;
+                for (int j = 0; j < 5; j++) {
+                    if (valores[j] <= menorEdad) {
+                        Console.WriteLine("Menor de edad: " + nombres[j] + ", Edad: " + valores[j]);
+                    }
+                }
+            }
+
+            if (opcionEntradaLocal == "d") {
+                int menorEdad = 20;
+                for (int j = 0; j < 5; j++) {
+                    if (valores[j] <= menorEdad) {
+                        Console.WriteLine("Menor de edad: " + nombres[j] + ", Edad: " + valores[j]);
+                    }
+                }
+            }
+
+            if (opcionEntradaLocal == "e") {
+                varAuxiliarlocal = 1;
+            }
+
+            if (opcionEntradaLocal != "a" && opcionEntradaLocal != "b" && opcionEntradaLocal != "c" && opcionEntradaLocal != "d" && opcionEntradaLocal != "e") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre a-e");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema5_2() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("5. Los ejercicios de la Tarea 13 ");
+        Console.WriteLine("2. Ejercicio 2");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("-----------------------");
+        Console.WriteLine("2. Problema 2 ");
+        Console.WriteLine("-----------------------");
+
+        Console.WriteLine("¿Cuantos numeros introduciras?: ");
+        int opcionEntradaLocal = int.Parse(Console.ReadLine());
+        int[] arrayNumeros = new int[opcionEntradaLocal];
+
+
+        for (int z = 0; z < opcionEntradaLocal; z++) {
+            Console.WriteLine((z + 1) + ". Ingresa el numero: ");
+            arrayNumeros[z] = int.Parse(Console.ReadLine());
+            Console.WriteLine("-----------------------");
+        }
+
+        Console.WriteLine("Elemento a buscar: ");
+        int elementoBuscar = int.Parse(Console.ReadLine());
+        int banderaPosicion = 0;
+
+        for (int z1 = 0; z1 < opcionEntradaLocal; z1++) {
+            Console.WriteLine("Elemento (" + arrayNumeros[z1] + "), Posicion: " + z1);
+        }
+
+        for (int z1 = 0; z1 < opcionEntradaLocal; z1++) {
+            if (arrayNumeros[z1] == elementoBuscar) {
+                Console.WriteLine("Elemento encontrado (" + elementoBuscar + "), Posicion: " + z1);
+                banderaPosicion = 1;
+            }
+        }
+
+        if (banderaPosicion == 0) {
+            Console.WriteLine("No se encontro el elemento con el valor (" + elementoBuscar + ")");
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema5_3() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("5. Los ejercicios de la Tarea 13 ");
+        Console.WriteLine("3. Ejercicio 3");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("-----------------------");
+        Console.WriteLine("3. Problema 3 ");
+        Console.WriteLine("-----------------------");
+
+        int[, ] matriz1 = new int[3, 3];
+        int[, ] matriz2 = new int[3, 3];
+        int[, ] matrizAuxResultado = new int[3, 3];
+        int varAuxiliarlocal = 0;
+
+        Console.WriteLine("-----------------Matriz 1 -----------------");
+        for (int t1 = 0; t1 < 3; t1++) {
+            for (int t2 = 0; t2 < 3; t2++) {
+                Console.WriteLine("Ingresa el valor de la posicion [" + t1 + "," + t2 + "]: ");
+                matriz1[t1, t2] = int.Parse(Console.ReadLine());
+                Console.WriteLine("-----------------------");
+            }
+        }
+
+        Console.WriteLine("-----------------Matriz 2 -----------------");
+        for (int t1 = 0; t1 < 3; t1++) {
+            for (int t2 = 0; t2 < 3; t2++) {
+                Console.WriteLine("Ingresa el valor de la posicion [" + t1 + "," + t2 + "]: ");
+                matriz2[t1, t2] = int.Parse(Console.ReadLine());
+                Console.WriteLine("-----------------------");
+            }
+        }
+
+        Console.Clear();
+        Console.WriteLine("-----------------Matriz 1 -----------------");
+        for (int t1 = 0; t1 < 3; t1++) {
+            String line = "";
+            for (int t2 = 0; t2 < 3; t2++) {
+                line = line + " " + matriz1[t1, t2];
+            }
+            Console.WriteLine(line);
+        }
+
+        Console.WriteLine("-----------------Matriz 2 -----------------");
+        for (int t1 = 0; t1 < 3; t1++) {
+            String line = "";
+            for (int t2 = 0; t2 < 3; t2++) {
+                line = line + " " + matriz2[t1, t2];
+            }
+            Console.WriteLine(line);
+        }
+
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("a. Resultado de la suma de las matrices");
+            Console.WriteLine("b. Resultado de la resta de las matrices");
+            Console.WriteLine("c. Resultado de la multiplicacion de las matrices ");
+            Console.WriteLine("d. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "a") {
+                for (int t1 = 0; t1 < 3; t1++) {
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        matrizAuxResultado[t1, t2] = matriz1[t1, t2] + matriz2[t1, t2];
+                    }
+                }
+
+                Console.WriteLine("Resultado de la suma: ");
+                for (int t1 = 0; t1 < 3; t1++) {
+                    String line = "";
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        line = line + " " + matrizAuxResultado[t1, t2];
+                    }
+                    Console.WriteLine(line);
+                }
+            }
+
+            if (opcionEntradaLocal == "b") {
+                for (int t1 = 0; t1 < 3; t1++) {
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        matrizAuxResultado[t1, t2] = matriz1[t1, t2] - matriz2[t1, t2];
+                    }
+                }
+
+                Console.WriteLine("Resultado de la resta: ");
+                for (int t1 = 0; t1 < 3; t1++) {
+                    String line = "";
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        line = line + " " + matrizAuxResultado[t1, t2];
+                    }
+                    Console.WriteLine(line);
+                }
+            }
+
+            if (opcionEntradaLocal == "c") {
+                for (int t1 = 0; t1 < 3; t1++) {
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        for (int t3 = 0; t3 < 3; t3++) {
+                            matrizAuxResultado[t1, t2] += matriz1[t1, t3] * matriz2[t3, t2];
+                        }
+                    }
+                }
+
+                Console.WriteLine("Resultado de la multiplicacion: ");
+                for (int t1 = 0; t1 < 3; t1++) {
+                    String line = "";
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        line = line + " " + matrizAuxResultado[t1, t2];
+                    }
+                    Console.WriteLine(line);
+                }
+            }
+
+            if (opcionEntradaLocal == "d") {
+                varAuxiliarlocal = 1;
+            }
+
+            if (opcionEntradaLocal != "a" && opcionEntradaLocal != "b" && opcionEntradaLocal != "c" && opcionEntradaLocal != "d") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre a-e");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////
+    public void problema6() {
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("6. Los ejercicios de la Tarea 14 ");
+        Console.WriteLine("----------------------");
+        int varAuxiliarlocal = 0;
+        Program problema6 = new Program();
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("1. Ejercicio 1");
+            Console.WriteLine("2. Ejercicio 2");
+            Console.WriteLine("3. Ejercicio 3");
+            Console.WriteLine("4. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "1") {
+                problema6.problema6_1();
+            }
+            if (opcionEntradaLocal == "2") {
+                problema6.problema6_2();
+            }
+            if (opcionEntradaLocal == "3") {
+                problema6.problema6_3();
+            }
+            if (opcionEntradaLocal == "4") {
+                varAuxiliarlocal = 1;
+            }
+            if (opcionEntradaLocal != "1" && opcionEntradaLocal != "2" && opcionEntradaLocal != "3" && opcionEntradaLocal != "4") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre 1-4");
+            }
+        }
+    }
+
+    public void problema6_1() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("6. Los ejercicios de la Tarea 14 ");
+        Console.WriteLine("1. Ejercicio 1");
+        Console.WriteLine("----------------------");
+        int[] valores = new int[5];
+        String[] nombres = new String[5];
+        int varAuxiliarlocal = 0;
+
+        for (int i = 0; i < 5; i++) {
+            Console.WriteLine("Ingresa el nombre (" + (i + 1) + "): ");
+            nombres[i] = Console.ReadLine();
+
+            Console.WriteLine("Ingresa la edad: ");
+            valores[i] = int.Parse(Console.ReadLine());
+            Console.WriteLine("-----------------------");
+        }
+
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("a. Los nombres y las edades de las personas mayores de edad en Mexico");
+            Console.WriteLine("b. Los nombres y las edades de las personas mayores de edad en Estados Unidos");
+            Console.WriteLine("c. Los nombres y las edades de las personas menores de edad en Mexico ");
+            Console.WriteLine("d. Los nombres y las edades de las personas menores de edad en Estados Unidos ");
+            Console.WriteLine("e. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "a") {
+                int mayorEdad = 18;
+                for (int j = 0; j < 5; j++) {
+                    if (valores[j] >= mayorEdad) {
+                        Console.WriteLine("Mayor de edad: " + nombres[j] + ", Edad: " + valores[j]);
+                    }
+                }
+            }
+
+            if (opcionEntradaLocal == "b") {
+                int mayorEdad = 21;
+                for (int j = 0; j < 5; j++) {
+                    if (valores[j] >= mayorEdad) {
+                        Console.WriteLine("Mayor de edad: " + nombres[j] + ", Edad: " + valores[j]);
+                    }
+                }
+            }
+
+            if (opcionEntradaLocal == "c") {
+                int menorEdad = 17;
+                for (int j = 0; j < 5; j++) {
+                    if (valores[j] <= menorEdad) {
+                        Console.WriteLine("Menor de edad: " + nombres[j] + ", Edad: " + valores[j]);
+                    }
+                }
+            }
+
+            if (opcionEntradaLocal == "d") {
+                int menorEdad = 20;
+                for (int j = 0; j < 5; j++) {
+                    if (valores[j] <= menorEdad) {
+                        Console.WriteLine("Menor de edad: " + nombres[j] + ", Edad: " + valores[j]);
+                    }
+                }
+            }
+
+            if (opcionEntradaLocal == "e") {
+                varAuxiliarlocal = 1;
+            }
+
+            if (opcionEntradaLocal != "a" && opcionEntradaLocal != "b" && opcionEntradaLocal != "c" && opcionEntradaLocal != "d" && opcionEntradaLocal != "e") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre a-e");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+    public void problema6_2() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("6. Los ejercicios de la Tarea 14 ");
+        Console.WriteLine("2. Ejercicio 2");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("¿Cuantos numeros introduciras?: ");
+        int opcionEntradaLocal = int.Parse(Console.ReadLine());
+        int[] arrayNumeros = new int[opcionEntradaLocal];
+
+
+        for (int z = 0; z < opcionEntradaLocal; z++) {
+            Console.WriteLine((z + 1) + ". Ingresa el numero: ");
+            arrayNumeros[z] = int.Parse(Console.ReadLine());
+            Console.WriteLine("-----------------------");
+        }
+
+        Console.WriteLine("Elemento a buscar: ");
+        int elementoBuscar = int.Parse(Console.ReadLine());
+        int banderaPosicion = 0;
+
+        for (int z1 = 0; z1 < opcionEntradaLocal; z1++) {
+            Console.WriteLine("Elemento (" + arrayNumeros[z1] + "), Posicion: " + z1);
+        }
+
+        for (int z1 = 0; z1 < opcionEntradaLocal; z1++) {
+            if (arrayNumeros[z1] == elementoBuscar) {
+                Console.WriteLine("Elemento encontrado (" + elementoBuscar + "), Posicion: " + z1);
+                banderaPosicion = 1;
+            }
+        }
+
+        if (banderaPosicion == 0) {
+            Console.WriteLine("No se encontro el elemento con el valor (" + elementoBuscar + ")");
+        }
+    }
+    public void problema6_3() {
+        Console.WriteLine("");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("----- Menu local -----");
+        Console.WriteLine("6. Los ejercicios de la Tarea 14 ");
+        Console.WriteLine("3. Ejercicio 3");
+        Console.WriteLine("----------------------");
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("-----------------------");
+        Console.WriteLine("3. Problema 3 ");
+        Console.WriteLine("-----------------------");
+
+        int[, ] matriz1 = new int[3, 3];
+        int[, ] matriz2 = new int[3, 3];
+        int[, ] matrizAuxResultado = new int[3, 3];
+        int varAuxiliarlocal = 0;
+
+        Console.WriteLine("-----------------Matriz 1 -----------------");
+        for (int t1 = 0; t1 < 3; t1++) {
+            for (int t2 = 0; t2 < 3; t2++) {
+                Console.WriteLine("Ingresa el valor de la posicion [" + t1 + "," + t2 + "]: ");
+                matriz1[t1, t2] = int.Parse(Console.ReadLine());
+                Console.WriteLine("-----------------------");
+            }
+        }
+
+        Console.WriteLine("-----------------Matriz 2 -----------------");
+        for (int t1 = 0; t1 < 3; t1++) {
+            for (int t2 = 0; t2 < 3; t2++) {
+                Console.WriteLine("Ingresa el valor de la posicion [" + t1 + "," + t2 + "]: ");
+                matriz2[t1, t2] = int.Parse(Console.ReadLine());
+                Console.WriteLine("-----------------------");
+            }
+        }
+
+        Console.Clear();
+        Console.WriteLine("-----------------Matriz 1 -----------------");
+        for (int t1 = 0; t1 < 3; t1++) {
+            String line = "";
+            for (int t2 = 0; t2 < 3; t2++) {
+                line = line + " " + matriz1[t1, t2];
+            }
+            Console.WriteLine(line);
+        }
+
+        Console.WriteLine("-----------------Matriz 2 -----------------");
+        for (int t1 = 0; t1 < 3; t1++) {
+            String line = "";
+            for (int t2 = 0; t2 < 3; t2++) {
+                line = line + " " + matriz2[t1, t2];
+            }
+            Console.WriteLine(line);
+			
+        }
+
+        while (varAuxiliarlocal == 0) {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--- Menu local ---");
+            Console.WriteLine("");
+            Console.WriteLine("Opciones ");
+            Console.WriteLine("a. Resultado de la suma de las matrices");
+            Console.WriteLine("b. Resultado de la resta de las matrices");
+            Console.WriteLine("c. Resultado de la multiplicacion de las matrices ");
+            Console.WriteLine("d. Salir ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Introduce la opcion: ");
+            String opcionEntradaLocal;
+            opcionEntradaLocal = Console.ReadLine();
+
+            if (opcionEntradaLocal == "a") {
+                for (int t1 = 0; t1 < 3; t1++) {
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        matrizAuxResultado[t1, t2] = matriz1[t1, t2] + matriz2[t1, t2];
+                    }
+                }
+
+                Console.WriteLine("Resultado de la suma: ");
+                for (int t1 = 0; t1 < 3; t1++) {
+                    String line = "";
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        line = line + " " + matrizAuxResultado[t1, t2];
+                    }
+                    Console.WriteLine(line);
+                }
+            }
+
+            if (opcionEntradaLocal == "b") {
+                for (int t1 = 0; t1 < 3; t1++) {
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        matrizAuxResultado[t1, t2] = matriz1[t1, t2] - matriz2[t1, t2];
+                    }
+                }
+
+                Console.WriteLine("Resultado de la resta: ");
+                for (int t1 = 0; t1 < 3; t1++) {
+                    String line = "";
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        line = line + " " + matrizAuxResultado[t1, t2];
+                    }
+                    Console.WriteLine(line);
+                }
+            }
+
+            if (opcionEntradaLocal == "c") {
+                for (int t1 = 0; t1 < 3; t1++) {
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        for (int t3 = 0; t3 < 3; t3++) {
+                            matrizAuxResultado[t1, t2] += matriz1[t1, t3] * matriz2[t3, t2];
+                        }
+                    }
+                }
+
+                Console.WriteLine("Resultado de la multiplicacion: ");
+                for (int t1 = 0; t1 < 3; t1++) {
+                    String line = "";
+                    for (int t2 = 0; t2 < 3; t2++) {
+                        line = line + " " + matrizAuxResultado[t1, t2];
+                    }
+                    Console.WriteLine(line);
+                }
+            }
+
+            if (opcionEntradaLocal == "d") {
+                varAuxiliarlocal = 1;
+            }
+
+            if (opcionEntradaLocal != "a" && opcionEntradaLocal != "b" && opcionEntradaLocal != "c" && opcionEntradaLocal != "d") {
+                Console.WriteLine("Opcion erronea, introduce una opcion entre a-d");
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+		Console.WriteLine("----------------------");
+		Console.WriteLine("Digita cualquier tecla y presiona enter");
+		String Auxdetente = Console.ReadLine();
+    }
+	    
+
+}
